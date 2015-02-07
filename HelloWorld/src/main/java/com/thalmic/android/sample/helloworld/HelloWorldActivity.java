@@ -26,14 +26,23 @@ import com.thalmic.myo.Vector3;
 import com.thalmic.myo.XDirection;
 import com.thalmic.myo.scanner.ScanActivity;
 
+import org.w3c.dom.Text;
+
 public class HelloWorldActivity extends Activity {
 
     private TextView mLockStateView;
     private TextView mTextView;
+    private TextView mSimonMessageTV;
 
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
     // If you do not override an event, the default behavior is to do nothing.
     private DeviceListener mListener = new AbstractDeviceListener() {
+
+        private int currentGesture = 0; //0 for no gesture
+        private final int M_FIST = 1;
+        private final int M_FINGERS_SPREAD = 2;
+        private final int M_WAVE_OUT = 3;
+        private final int M_WAVE_INT = 4;
 
         // onConnect() is called whenever a Myo has been connected.
         @Override
@@ -115,13 +124,13 @@ public class HelloWorldActivity extends Activity {
                     break;
                 case REST:
                 case DOUBLE_TAP:
-                    int restTextId = R.string.hello_world;
+                    //int restTextId = R.string.hello_world;
+                    int restTextId = R.string.waiting;
                     switch (myo.getArm()) {
                         case LEFT:
                             //restTextId = R.string.arm_left; took out so that simon says works
                             break;
                         case RIGHT:
-
                             //restTextId = R.string.arm_right; took out so that simon says works
                             break;
                     }
@@ -129,19 +138,31 @@ public class HelloWorldActivity extends Activity {
                     break;
                 case FIST:
                     mTextView.setText(getString(R.string.pose_fist));
-                    //TODO confirm that first was made
+                    //confirm that first was made
+                    if(currentGesture == M_FIST){
+                        generateNextDirection();
+                    }
                     break;
                 case WAVE_IN:
                     mTextView.setText(getString(R.string.pose_wavein));
-                    //TODO confirm that you waved in
+                    //confirm that you waved in
+                    if(currentGesture == M_WAVE_INT){
+                        generateNextDirection();
+                    }
                     break;
                 case WAVE_OUT:
                     mTextView.setText(getString(R.string.pose_waveout));
-                    //TODO confirm that you waved out
+                    //confirm that you waved out
+                    if(currentGesture == M_WAVE_OUT){
+                        generateNextDirection();
+                    }
                     break;
                 case FINGERS_SPREAD:
                     mTextView.setText(getString(R.string.pose_fingersspread));
-                    //TODO confirm that fingers were spread
+                    //confirm that fingers were spread
+                    if(currentGesture == M_FINGERS_SPREAD){
+                        generateNextDirection();
+                    }
                     break;
             }
 
@@ -159,6 +180,28 @@ public class HelloWorldActivity extends Activity {
                 myo.unlock(Myo.UnlockType.TIMED);
             }
         }
+
+        //create next Simon says
+        private void generateNextDirection(){
+            int nextDir = (int) (Math.random() * 4) + 1; //random int from 1 - 4
+            currentGesture = nextDir;
+            // change Simon says message
+            switch (currentGesture){
+                case M_FINGERS_SPREAD:
+                    mSimonMessageTV.setText(getString(R.string.s_fingers_spread));
+                    break;
+                case M_FIST:
+                    mSimonMessageTV.setText(getString(R.string.s_fist));
+                    break;
+                case M_WAVE_INT:
+                    mSimonMessageTV.setText(getString(R.string.s_wave_in));
+                    break;
+                case M_WAVE_OUT:
+                    mSimonMessageTV.setText(getString(R.string.s_wave_out));
+                    break;
+            }
+        }
+
         @Override
         public void onAccelerometerData(Myo myo, long timestamp, Vector3 accel) {
 
@@ -180,6 +223,7 @@ public class HelloWorldActivity extends Activity {
 
         mLockStateView = (TextView) findViewById(R.id.lock_state);
         mTextView = (TextView) findViewById(R.id.text);
+        mSimonMessageTV = (TextView) findViewById(R.id.simon_directions);
         Toast.makeText(getApplicationContext(), "On Create", Toast.LENGTH_SHORT).show();
 
         // First, we initialize the Hub singleton with an application identifier.

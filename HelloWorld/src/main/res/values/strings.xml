@@ -15,5 +15,11 @@
     <string name="locked">Locked</string>
     <string name="s_fist">Simon Says: Make a Fist!</string>
     <string name="waiting">waiting...</string>
+    <string name="next">next...</string>
+    <string name="s_open">Simon Says: Open your hand!</string>
+    <string name="s_wave_in">Simon Says: wave your hand in</string>
+    <string name="s_wave_out">Simon Says: Wave your hand out!</string>
+    <string name="s_wait">Simon Says: Wait a sec</string>
+    <string name="s_fingers_spread">Simon Says: Spread your Fingers!</string>
 
 </resources>

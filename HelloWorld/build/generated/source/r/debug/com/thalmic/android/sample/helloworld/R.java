@@ -70,6 +70,7 @@ public final class R {
         public static final int s_fist=0x7f060010;
         public static final int scan=0x7f060011;
         public static final int unlocked=0x7f060012;
+        public static final int waiting=0x7f060013;
     }
     public static final class style {
         public static final int myosdk__PopupActivityTheme=0x7f070000;
