@@ -28,16 +28,17 @@ public final class R {
         public static final int myosdk__firmware_incompatible_dot=0x7f020002;
     }
     public static final class id {
-        public static final int action_scan=0x7f090008;
+        public static final int action_scan=0x7f090009;
         public static final int container=0x7f090000;
-        public static final int lock_state=0x7f090001;
-        public static final int myosdk__action_scan=0x7f090009;
-        public static final int myosdk__connection_state_dot=0x7f090006;
-        public static final int myosdk__fragment_scan=0x7f090003;
-        public static final int myosdk__progress=0x7f090005;
-        public static final int myosdk__required_firmware_version_text=0x7f090004;
-        public static final int myosdk__scan_result_view=0x7f090007;
-        public static final int text=0x7f090002;
+        public static final int lock_state=0x7f090002;
+        public static final int myosdk__action_scan=0x7f09000a;
+        public static final int myosdk__connection_state_dot=0x7f090007;
+        public static final int myosdk__fragment_scan=0x7f090004;
+        public static final int myosdk__progress=0x7f090006;
+        public static final int myosdk__required_firmware_version_text=0x7f090005;
+        public static final int myosdk__scan_result_view=0x7f090008;
+        public static final int simon_directions=0x7f090003;
+        public static final int text=0x7f090001;
     }
     public static final class layout {
         public static final int activity_hello_world=0x7f030000;
@@ -66,8 +67,9 @@ public final class R {
         public static final int pose_rest=0x7f06000d;
         public static final int pose_wavein=0x7f06000e;
         public static final int pose_waveout=0x7f06000f;
-        public static final int scan=0x7f060010;
-        public static final int unlocked=0x7f060011;
+        public static final int s_fist=0x7f060010;
+        public static final int scan=0x7f060011;
+        public static final int unlocked=0x7f060012;
     }
     public static final class style {
         public static final int myosdk__PopupActivityTheme=0x7f070000;

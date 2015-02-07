@@ -118,25 +118,30 @@ public class HelloWorldActivity extends Activity {
                     int restTextId = R.string.hello_world;
                     switch (myo.getArm()) {
                         case LEFT:
-                            restTextId = R.string.arm_left;
+                            //restTextId = R.string.arm_left; took out so that simon says works
                             break;
                         case RIGHT:
-                            restTextId = R.string.arm_right;
+
+                            //restTextId = R.string.arm_right; took out so that simon says works
                             break;
                     }
                     mTextView.setText(getString(restTextId));
                     break;
                 case FIST:
                     mTextView.setText(getString(R.string.pose_fist));
+                    //TODO confirm that first was made
                     break;
                 case WAVE_IN:
                     mTextView.setText(getString(R.string.pose_wavein));
+                    //TODO confirm that you waved in
                     break;
                 case WAVE_OUT:
                     mTextView.setText(getString(R.string.pose_waveout));
+                    //TODO confirm that you waved out
                     break;
                 case FINGERS_SPREAD:
                     mTextView.setText(getString(R.string.pose_fingersspread));
+                    //TODO confirm that fingers were spread
                     break;
             }
 
@@ -159,7 +164,7 @@ public class HelloWorldActivity extends Activity {
 
             if (accel.x() > 1.0) {
                 Toast.makeText(getApplicationContext(), "Accel in X", Toast.LENGTH_SHORT).show();
-
+                //TODO add "Don't hit the screen!!"
             }
 
             //TODO make a splat
