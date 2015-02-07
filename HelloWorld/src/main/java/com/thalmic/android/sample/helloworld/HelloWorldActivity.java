@@ -186,7 +186,7 @@ public class HelloWorldActivity extends Activity {
         private void generateNextDirection(){
             int nextDir = (int) (Math.random() * 4) + 1; //random int from 1 - 4
             currentGesture = nextDir;
-            Toast.makeText(getApplicationContext(), Integer.toString(nextDir), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), Integer.toString(nextDir), Toast.LENGTH_SHORT).show();
             // change Simon says message
             switch (currentGesture){
                 case M_FINGERS_SPREAD:
