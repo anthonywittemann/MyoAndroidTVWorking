@@ -62,15 +62,21 @@ public final class R {
         public static final int myosdk__firmware_version_format=0x7f060008;
         public static final int myosdk__title_activity_scan=0x7f060009;
         public static final int myosdk__unknown_myo=0x7f06000a;
-        public static final int pose_fingersspread=0x7f06000b;
-        public static final int pose_fist=0x7f06000c;
-        public static final int pose_rest=0x7f06000d;
-        public static final int pose_wavein=0x7f06000e;
-        public static final int pose_waveout=0x7f06000f;
-        public static final int s_fist=0x7f060010;
-        public static final int scan=0x7f060011;
-        public static final int unlocked=0x7f060012;
-        public static final int waiting=0x7f060013;
+        public static final int next=0x7f06000b;
+        public static final int pose_fingersspread=0x7f06000c;
+        public static final int pose_fist=0x7f06000d;
+        public static final int pose_rest=0x7f06000e;
+        public static final int pose_wavein=0x7f06000f;
+        public static final int pose_waveout=0x7f060010;
+        public static final int s_fingers_spread=0x7f060011;
+        public static final int s_fist=0x7f060012;
+        public static final int s_open=0x7f060013;
+        public static final int s_wait=0x7f060014;
+        public static final int s_wave_in=0x7f060015;
+        public static final int s_wave_out=0x7f060016;
+        public static final int scan=0x7f060017;
+        public static final int unlocked=0x7f060018;
+        public static final int waiting=0x7f060019;
     }
     public static final class style {
         public static final int myosdk__PopupActivityTheme=0x7f070000;

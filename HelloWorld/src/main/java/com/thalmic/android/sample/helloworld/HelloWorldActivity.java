@@ -117,10 +117,10 @@ public class HelloWorldActivity extends Activity {
         public void onPose(Myo myo, long timestamp, Pose pose) {
             // Handle the cases of the Pose enumeration, and change the text of the text view
             // based on the pose we receive.
-            Toast.makeText(getApplicationContext(), "Posing",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Posing",Toast.LENGTH_SHORT).show();
             switch (pose) {
                 case UNKNOWN:
-                    mTextView.setText(getString(R.string.hello_world));
+                    mTextView.setText(getString(R.string.waiting));
                     break;
                 case REST:
                 case DOUBLE_TAP:
@@ -206,7 +206,8 @@ public class HelloWorldActivity extends Activity {
         public void onAccelerometerData(Myo myo, long timestamp, Vector3 accel) {
 
             if (accel.x() > 1.0) {
-                Toast.makeText(getApplicationContext(), "Accel in X", Toast.LENGTH_SHORT).show();
+
+                //Toast.makeText(getApplicationContext(), "Accel in X", Toast.LENGTH_SHORT).show();
                 //TODO add "Don't hit the screen!!"
             }
 
@@ -224,7 +225,7 @@ public class HelloWorldActivity extends Activity {
         mLockStateView = (TextView) findViewById(R.id.lock_state);
         mTextView = (TextView) findViewById(R.id.text);
         mSimonMessageTV = (TextView) findViewById(R.id.simon_directions);
-        Toast.makeText(getApplicationContext(), "On Create", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "On Create", Toast.LENGTH_SHORT).show();
 
         // First, we initialize the Hub singleton with an application identifier.
         Hub hub = Hub.getInstance();
