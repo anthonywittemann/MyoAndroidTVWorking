@@ -38,11 +38,12 @@ public class HelloWorldActivity extends Activity {
     // If you do not override an event, the default behavior is to do nothing.
     private DeviceListener mListener = new AbstractDeviceListener() {
 
-        private int currentGesture = 0; //0 for no gesture
         private final int M_FIST = 1;
         private final int M_FINGERS_SPREAD = 2;
         private final int M_WAVE_OUT = 3;
         private final int M_WAVE_INT = 4;
+        private int currentGesture = M_FIST; //0 for no gesture
+
 
         // onConnect() is called whenever a Myo has been connected.
         @Override
@@ -185,6 +186,7 @@ public class HelloWorldActivity extends Activity {
         private void generateNextDirection(){
             int nextDir = (int) (Math.random() * 4) + 1; //random int from 1 - 4
             currentGesture = nextDir;
+            Toast.makeText(getApplicationContext(), Integer.toString(nextDir), Toast.LENGTH_SHORT).show();
             // change Simon says message
             switch (currentGesture){
                 case M_FINGERS_SPREAD:
