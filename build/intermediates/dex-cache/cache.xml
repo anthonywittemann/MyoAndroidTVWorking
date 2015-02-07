@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/anthonywittemann/AndroidStudioProjects/androidtv-codelab-app/MioAndroidTV/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/libs/native-libs.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d24ac9790966ffbd1bd9d921a262572c94903027">
+        <dex dex="/Users/anthonywittemann/AndroidStudioProjects/androidtv-codelab-app/MioAndroidTV/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/native-libs-025962b129ac37507a444aa21736fd97aa598f2a.jar" />
+    </item>
+    <item
+        jar="/Users/anthonywittemann/AndroidStudioProjects/androidtv-codelab-app/MioAndroidTV/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
+        <dex dex="/Users/anthonywittemann/AndroidStudioProjects/androidtv-codelab-app/MioAndroidTV/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/classes-f3b001839a3d3ae9b5f48a8f4ed9e26e613de9c8.jar" />
+    </item>
+
+</items>
