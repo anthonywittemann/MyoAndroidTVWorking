@@ -54,4 +54,13 @@
         android:layout_gravity="right|bottom"
         android:textSize="32sp" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="282dp"
+        android:id="@+id/rainbow_reward"
+        android:layout_gravity="center"
+        android:contentDescription="image that rewards after 10 successful gestures"
+        android:src="@drawable/rainbow"
+        android:visibility="invisible" />
+
 </FrameLayout>

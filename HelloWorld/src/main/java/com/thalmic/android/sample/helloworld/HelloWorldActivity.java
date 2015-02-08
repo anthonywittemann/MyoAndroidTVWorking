@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class HelloWorldActivity extends Activity {
     private TextView mSimonMessageTV;
     private TextView numMovesTV;
     private ImageView gestureIV;
+    private ImageView rainbowTV;
     private ArrayList<Integer> previousGestures = new ArrayList<Integer>();
 
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
@@ -192,6 +194,12 @@ public class HelloWorldActivity extends Activity {
             //keeps track of previous gestures in arrayList
             previousGestures.add(currentGesture);
             numMovesTV.setText("Moves Completed: " + Integer.toString(previousGestures.size()));
+            if(previousGestures.size() % 10 == 0 && previousGestures.size() != 0){
+                rainbowTV.setVisibility(View.VISIBLE);
+            }
+            else{
+                rainbowTV.setVisibility(View.INVISIBLE);
+            }
 
             int nextDir = (int) (Math.random() * 4) + 1; //random int from 1 - 4
             currentGesture = nextDir;
@@ -242,6 +250,8 @@ public class HelloWorldActivity extends Activity {
         mSimonMessageTV = (TextView) findViewById(R.id.simon_directions);
         gestureIV = (ImageView) findViewById(R.id.imageView);
         numMovesTV = (TextView) findViewById(R.id.moves_completed);
+        rainbowTV = (ImageView) findViewById(R.id.rainbow_reward);
+        //TODO create imageview for rainbow
 
         //Toast.makeText(getApplicationContext(), "On Create", Toast.LENGTH_SHORT).show();
 
