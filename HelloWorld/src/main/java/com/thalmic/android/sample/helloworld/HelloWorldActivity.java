@@ -87,6 +87,7 @@ public class HelloWorldActivity extends Activity {
         public void onUnlock(Myo myo, long timestamp) {
             mLockStateView.setText(R.string.unlocked);
             Toast.makeText(getApplicationContext(), "Unlocked",Toast.LENGTH_SHORT).show();
+            mSimonMessageTV.setText(R.string.s_fist);
         }
 
         // onLock() is called whenever a synced Myo has been locked. Under the standard locking
