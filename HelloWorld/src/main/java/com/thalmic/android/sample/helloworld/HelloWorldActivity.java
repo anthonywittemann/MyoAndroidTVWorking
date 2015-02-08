@@ -27,12 +27,16 @@ import com.thalmic.myo.Vector3;
 import com.thalmic.myo.XDirection;
 import com.thalmic.myo.scanner.ScanActivity;
 
+import java.util.ArrayList;
+
 public class HelloWorldActivity extends Activity {
 
     private TextView mLockStateView;
     private TextView mTextView;
     private TextView mSimonMessageTV;
+    private TextView numMovesTV;
     private ImageView gestureIV;
+    private ArrayList<Integer> previousGestures = new ArrayList<Integer>();
 
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
     // If you do not override an event, the default behavior is to do nothing.
@@ -184,6 +188,10 @@ public class HelloWorldActivity extends Activity {
 
         //create next Simon says
         private void generateNextDirection(){
+            //keeps track of previous gestures in arrayList
+            previousGestures.add(currentGesture);
+            numMovesTV.setText("Moves Completed: " + Integer.toString(previousGestures.size()));
+
             int nextDir = (int) (Math.random() * 4) + 1; //random int from 1 - 4
             currentGesture = nextDir;
             //Toast.makeText(getApplicationContext(), Integer.toString(nextDir), Toast.LENGTH_SHORT).show();
@@ -232,6 +240,7 @@ public class HelloWorldActivity extends Activity {
         mTextView = (TextView) findViewById(R.id.text);
         mSimonMessageTV = (TextView) findViewById(R.id.simon_directions);
         gestureIV = (ImageView) findViewById(R.id.imageView);
+        numMovesTV = (TextView) findViewById(R.id.moves_completed);
 
         //Toast.makeText(getApplicationContext(), "On Create", Toast.LENGTH_SHORT).show();
 

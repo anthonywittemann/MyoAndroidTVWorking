@@ -45,4 +45,13 @@
         tools:ignore="SpUsage"
         android:visibility="invisible" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/moves_completed"
+        android:id="@+id/moves_completed"
+        android:layout_gravity="right|bottom"
+        android:textSize="32sp" />
+
 </FrameLayout>

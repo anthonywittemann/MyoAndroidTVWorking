@@ -24,12 +24,12 @@ public final class R {
 		public static final int myosdk__firmware_incompatible_dot = 0x7f020007;
 	}
 	public static final class id {
-		public static final int myosdk__action_scan = 0x7f0a000b;
-		public static final int myosdk__connection_state_dot = 0x7f0a0008;
-		public static final int myosdk__fragment_scan = 0x7f0a0005;
-		public static final int myosdk__progress = 0x7f0a0007;
-		public static final int myosdk__required_firmware_version_text = 0x7f0a0006;
-		public static final int myosdk__scan_result_view = 0x7f0a0009;
+		public static final int myosdk__action_scan = 0x7f0a000c;
+		public static final int myosdk__connection_state_dot = 0x7f0a0009;
+		public static final int myosdk__fragment_scan = 0x7f0a0006;
+		public static final int myosdk__progress = 0x7f0a0008;
+		public static final int myosdk__required_firmware_version_text = 0x7f0a0007;
+		public static final int myosdk__scan_result_view = 0x7f0a000a;
 	}
 	public static final class layout {
 		public static final int myosdk__activity_scan = 0x7f040001;
@@ -40,12 +40,12 @@ public final class R {
 		public static final int myosdk__fragment_scan = 0x7f090001;
 	}
 	public static final class string {
-		public static final int myosdk__action_scan = 0x7f070006;
-		public static final int myosdk__action_stop_scan = 0x7f070007;
-		public static final int myosdk__firmware_required_format = 0x7f070008;
-		public static final int myosdk__firmware_version_format = 0x7f070009;
-		public static final int myosdk__title_activity_scan = 0x7f07000a;
-		public static final int myosdk__unknown_myo = 0x7f07000b;
+		public static final int myosdk__action_scan = 0x7f070007;
+		public static final int myosdk__action_stop_scan = 0x7f070008;
+		public static final int myosdk__firmware_required_format = 0x7f070009;
+		public static final int myosdk__firmware_version_format = 0x7f07000a;
+		public static final int myosdk__title_activity_scan = 0x7f07000b;
+		public static final int myosdk__unknown_myo = 0x7f07000c;
 	}
 	public static final class style {
 		public static final int myosdk__PopupActivityTheme = 0x7f080000;

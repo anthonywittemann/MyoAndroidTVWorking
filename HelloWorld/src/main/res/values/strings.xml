@@ -23,5 +23,6 @@
     <string name="s_fingers_spread">Simon Says: Spread your Fingers!</string>
     <string name="gesture_image_descr">Image of the gesture to be performed</string>
     <string name="simon_says_descr">Simon Says directions</string>
+    <string name="moves_completed">moves completed: 0</string>
 
 </resources>
