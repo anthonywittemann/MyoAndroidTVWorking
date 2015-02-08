@@ -180,7 +180,7 @@ public class HelloWorldActivity extends Activity {
             } else {
                 // Tell the Myo to stay unlocked only for a short period. This allows the Myo to
                 // stay unlocked while poses are being performed, but lock after inactivity.
-                myo.unlock(Myo.UnlockType.TIMED);
+                myo.unlock(Myo.UnlockType.HOLD);
             }
         }
 
