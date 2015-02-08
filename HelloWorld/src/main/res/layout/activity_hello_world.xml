@@ -23,15 +23,17 @@
         android:text="@string/s_wait"
         android:id="@+id/simon_directions"
         android:layout_gravity="center_horizontal|top"
-        android:textSize="50dp"
-        android:textAlignment="center" />
+        android:textSize="50sp"
+        android:textAlignment="center"
+        android:contentDescription="@string/simon_says_descr" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="right|center_vertical"
-        android:src="@mipmap/ic_launcher4" />
+        android:src="@drawable/solid_blue_RH_double_tap2x"
+        android:contentDescription="@string/gesture_image_descr" />
 
     <TextView
         android:id="@+id/text"
