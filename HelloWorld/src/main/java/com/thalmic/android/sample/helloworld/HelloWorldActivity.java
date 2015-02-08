@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class HelloWorldActivity extends Activity {
     private TextView mLockStateView;
     private TextView mTextView;
     private TextView mSimonMessageTV;
+    private ImageView gestureIV;
 
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
     // If you do not override an event, the default behavior is to do nothing.
@@ -191,15 +193,19 @@ public class HelloWorldActivity extends Activity {
             switch (currentGesture){
                 case M_FINGERS_SPREAD:
                     mSimonMessageTV.setText(getString(R.string.s_fingers_spread));
+                    gestureIV.setImageResource(R.drawable.ic_launcher2);
                     break;
                 case M_FIST:
                     mSimonMessageTV.setText(getString(R.string.s_fist));
+                    gestureIV.setImageResource(R.drawable.ic_launcher3);
                     break;
                 case M_WAVE_INT:
                     mSimonMessageTV.setText(getString(R.string.s_wave_in));
+                    gestureIV.setImageResource(R.drawable.ic_launcher1);
                     break;
                 case M_WAVE_OUT:
                     mSimonMessageTV.setText(getString(R.string.s_wave_out));
+                    gestureIV.setImageResource(R.drawable.ic_launcher5);
                     break;
             }
         }
@@ -227,6 +233,8 @@ public class HelloWorldActivity extends Activity {
         mLockStateView = (TextView) findViewById(R.id.lock_state);
         mTextView = (TextView) findViewById(R.id.text);
         mSimonMessageTV = (TextView) findViewById(R.id.simon_directions);
+        gestureIV = (ImageView) findViewById(R.id.imageView);
+
         //Toast.makeText(getApplicationContext(), "On Create", Toast.LENGTH_SHORT).show();
 
         // First, we initialize the Hub singleton with an application identifier.
