@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="right|center_vertical"
-        android:src="@drawable/solid_blue_RH_double_tap2x"
+        android:src="@drawable/solid_blue_double_tap2x"
         android:contentDescription="@string/gesture_image_descr" />
 
     <TextView

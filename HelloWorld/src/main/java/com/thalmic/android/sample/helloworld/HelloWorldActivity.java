@@ -27,8 +27,6 @@ import com.thalmic.myo.Vector3;
 import com.thalmic.myo.XDirection;
 import com.thalmic.myo.scanner.ScanActivity;
 
-import org.w3c.dom.Text;
-
 public class HelloWorldActivity extends Activity {
 
     private TextView mLockStateView;
@@ -193,19 +191,19 @@ public class HelloWorldActivity extends Activity {
             switch (currentGesture){
                 case M_FINGERS_SPREAD:
                     mSimonMessageTV.setText(getString(R.string.s_fingers_spread));
-                    gestureIV.setImageResource(R.drawable.solid_blue_RH_spread_fingers2x);
+                    gestureIV.setImageResource(R.drawable.solid_blue_spread_fingers2x);
                     break;
                 case M_FIST:
                     mSimonMessageTV.setText(getString(R.string.s_fist));
-                    gestureIV.setImageResource(R.drawable.solid_blue_RH_fist2x);
+                    gestureIV.setImageResource(R.drawable.solid_blue_fist2x);
                     break;
                 case M_WAVE_INT:
                     mSimonMessageTV.setText(getString(R.string.s_wave_in));
-                    gestureIV.setImageResource(R.drawable.solid_blue_RH_wave_left2x);
+                    gestureIV.setImageResource(R.drawable.solid_blue_wave_left2x);
                     break;
                 case M_WAVE_OUT:
                     mSimonMessageTV.setText(getString(R.string.s_wave_out));
-                    gestureIV.setImageResource(R.drawable.solid_blue_RH_wave_right2x);
+                    gestureIV.setImageResource(R.drawable.solid_blue_wave_right2x);
                     break;
             }
         }

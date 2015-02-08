@@ -40,12 +40,12 @@ public final class R {
 		public static final int myosdk__fragment_scan = 0x7f090001;
 	}
 	public static final class string {
-		public static final int myosdk__action_scan = 0x7f070005;
-		public static final int myosdk__action_stop_scan = 0x7f070006;
-		public static final int myosdk__firmware_required_format = 0x7f070007;
-		public static final int myosdk__firmware_version_format = 0x7f070008;
-		public static final int myosdk__title_activity_scan = 0x7f070009;
-		public static final int myosdk__unknown_myo = 0x7f07000a;
+		public static final int myosdk__action_scan = 0x7f070006;
+		public static final int myosdk__action_stop_scan = 0x7f070007;
+		public static final int myosdk__firmware_required_format = 0x7f070008;
+		public static final int myosdk__firmware_version_format = 0x7f070009;
+		public static final int myosdk__title_activity_scan = 0x7f07000a;
+		public static final int myosdk__unknown_myo = 0x7f07000b;
 	}
 	public static final class style {
 		public static final int myosdk__PopupActivityTheme = 0x7f080000;
